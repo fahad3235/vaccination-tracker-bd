@@ -1,0 +1,61 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: #f4f8f6; color: #1d2a24; }
+.topbar { background: #0d5c3f; color: #fff; padding: 16px 20px; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.topbar > div { min-width: 0; flex: 1 1 auto; }
+.topbar h1 { margin: 0; font-size: 1.5rem; overflow-wrap: break-word; }
+.tagline { margin: 4px 0 0; opacity: .9; font-size: .95rem; overflow-wrap: break-word; }
+.lang-btn { background: #fff; color: #0d5c3f; border: 0; border-radius: 6px; padding: 8px 14px; font-weight: 700; cursor: pointer; flex-shrink: 0; }
+.tabs { display: flex; gap: 8px; padding: 12px 20px 0; }
+.tabs button { border: 1px solid #cfe0d8; background: #fff; padding: 9px 18px; border-radius: 8px 8px 0 0; cursor: pointer; font-size: 1rem; }
+.tabs button.active { background: #0d5c3f; color: #fff; border-color: #0d5c3f; }
+.main { max-width: 960px; margin: 0 auto; padding: 16px 20px 40px; }
+.card { background: #fff; border: 1px solid #dde7e1; border-radius: 10px; padding: 16px; margin: 12px 0; }
+.stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin: 12px 0; }
+.stat { background: #fff; border: 1px solid #dde7e1; border-radius: 10px; padding: 14px 10px; text-align: center; }
+.stat-num { font-size: 1.7rem; font-weight: 800; color: #0d5c3f; }
+.stat-label { font-size: .85rem; color: #4a5a53; margin-top: 2px; }
+.bar { height: 10px; background: #e3ece7; border-radius: 6px; overflow: hidden; margin: 6px 0; }
+.bar-fill { height: 100%; background: #0d5c3f; }
+.child-progress { background: #fff; border: 1px solid #dde7e1; border-radius: 10px; padding: 12px 14px; margin: 8px 0; }
+.cp-head { display: flex; justify-content: space-between; gap: 10px; }
+.upcoming { list-style: none; padding: 0; }
+.upcoming li { background: #fff; border: 1px solid #dde7e1; border-radius: 8px; padding: 10px 12px; margin: 6px 0; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: .8rem; font-weight: 700; }
+.badge-done { background: #d8f0e2; color: #0d5c3f; }
+.badge-missed { background: #e8e8e8; color: #555; }
+.badge-overdue { background: #fde2e2; color: #a11; }
+.badge-due-soon { background: #fff3cd; color: #7a5b00; }
+.badge-upcoming { background: #e2eafb; color: #24407a; }
+.empty { color: #5a6a63; background: #fff; border: 1px dashed #c9d8d0; border-radius: 8px; padding: 14px; }
+label { display: block; margin: 8px 0; font-weight: 600; }
+input, select, textarea { display: block; width: 100%; margin-top: 4px; padding: 9px 10px; border: 1px solid #c6d4cd; border-radius: 6px; font-size: 1rem; background: #fff; }
+button { background: #0d5c3f; color: #fff; border: 0; border-radius: 6px; padding: 8px 14px; font-size: .95rem; cursor: pointer; }
+button:hover { background: #0a4a33; }
+.child-card { background: #fff; border: 1px solid #dde7e1; border-radius: 10px; padding: 14px; margin: 10px 0; display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+.child-card > div { min-width: 0; overflow-wrap: break-word; }
+.row-actions { display: flex; gap: 6px; flex-wrap: wrap; flex-shrink: 0; }
+.row-actions button:nth-child(3) { background: #a11; }
+.muted { color: #5a6a63; }
+.small { font-size: .8rem; }
+.errors { color: #a11; font-weight: 600; margin: 8px 0; }
+.errors:empty { display: none; }
+.notice { background: #fff3cd; border: 1px solid #ecd27a; border-radius: 8px; padding: 10px 12px; margin: 10px 0; }
+.notice:empty { display: none; }
+table.sched { width: 100%; border-collapse: collapse; margin: 4px 0 16px; background: #fff; }
+table.sched th, table.sched td { border: 1px solid #dde7e1; padding: 8px; text-align: left; vertical-align: middle; }
+table.sched th { background: #eef5f1; }
+table.sched td input[type="date"] { width: 150px; display: inline-block; }
+table.sched td button { margin: 2px; }
+.danger { border-color: #f0c4c4; }
+.danger button { background: #a11; }
+footer { max-width: 960px; margin: 0 auto; padding: 0 20px 30px; color: #5a6a63; font-size: .9rem; }
+@media (max-width: 600px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .child-card { flex-direction: column; }
+  table.sched, table.sched tbody, table.sched tr, table.sched td { display: block; width: 100%; }
+  table.sched thead { display: none; }
+  table.sched tr { margin-bottom: 10px; border: 1px solid #dde7e1; border-radius: 8px; }
+  table.sched td { border: 0; border-bottom: 1px solid #eee; }
+  table.sched td input[type="date"] { width: 100%; }
+  .topbar h1 { font-size: 1.25rem; }
+}
